@@ -1,0 +1,35 @@
+{
+  "name": "@yezhiyi9670/test-component-library",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --p ./tsconfig-build.json && vite build",
+    "prepublishOnly": "npm run build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "vue": "^3.4.21",
+    "@types/node": "^20.11.30",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "glob": "^10.3.10",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-lib-inject-css": "^2.0.1",
+    "vue-tsc": "^2.0.6"
+  },
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "dist/**/*.css"
+  ]
+}
